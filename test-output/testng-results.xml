@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26523" started-at="2017-01-25T11:32:26Z" finished-at="2017-01-25T11:32:52Z">
+  <suite name="Suite1" duration-ms="23366" started-at="2017-01-26T10:47:09Z" finished-at="2017-01-26T10:47:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26523" started-at="2017-01-25T11:32:26Z" finished-at="2017-01-25T11:32:52Z">
-      <class name="com.bahar.automation.test.HomeTest">
-        <test-method status="PASS" signature="openPage()[pri:0, instance:com.bahar.automation.test.HomeTest@732c2a62]" name="openPage" is-config="true" duration-ms="2513" started-at="2017-01-25T17:32:26Z" finished-at="2017-01-25T17:32:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openPage -->
-        <test-method status="PASS" signature="checkTitle()[pri:0, instance:com.bahar.automation.test.HomeTest@732c2a62]" name="checkTitle" duration-ms="37" started-at="2017-01-25T17:32:28Z" finished-at="2017-01-25T17:32:28Z">
+    <test name="reservedFlight" duration-ms="23366" started-at="2017-01-26T10:47:09Z" finished-at="2017-01-26T10:47:32Z">
+      <class name="com.bahar.automation.test.FindFlightTest">
+        <test-method status="PASS" signature="checkTitle()[pri:0, instance:com.bahar.automation.test.FindFlightTest@224edc67]" name="checkTitle" duration-ms="3464" started-at="2017-01-26T16:47:26Z" finished-at="2017-01-26T16:47:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTitle -->
-        <test-method status="PASS" signature="checkMenu()[pri:0, instance:com.bahar.automation.test.HomeTest@732c2a62]" name="checkMenu" duration-ms="408" started-at="2017-01-25T17:32:28Z" finished-at="2017-01-25T17:32:29Z">
+        <test-method status="PASS" signature="checkFlightDetails()[pri:0, instance:com.bahar.automation.test.FindFlightTest@224edc67]" name="checkFlightDetails" duration-ms="2228" started-at="2017-01-26T16:47:29Z" finished-at="2017-01-26T16:47:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFlightDetails -->
+      </class> <!-- com.bahar.automation.test.FindFlightTest -->
+      <class name="com.bahar.automation.test.SelectFlightTest">
+        <test-method status="PASS" signature="checkTitle()[pri:0, instance:com.bahar.automation.test.SelectFlightTest@14acaea5]" name="checkTitle" duration-ms="752" started-at="2017-01-26T16:47:31Z" finished-at="2017-01-26T16:47:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitle -->
+        <test-method status="PASS" signature="selectFlightDetails()[pri:0, instance:com.bahar.automation.test.SelectFlightTest@14acaea5]" name="selectFlightDetails" duration-ms="249" started-at="2017-01-26T16:47:32Z" finished-at="2017-01-26T16:47:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFlightDetails -->
+      </class> <!-- com.bahar.automation.test.SelectFlightTest -->
+      <class name="com.bahar.automation.test.HomeTest">
+        <test-method status="PASS" signature="checkTitle()[pri:0, instance:com.bahar.automation.test.HomeTest@457e2f02]" name="checkTitle" duration-ms="11632" started-at="2017-01-26T16:47:09Z" finished-at="2017-01-26T16:47:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitle -->
+        <test-method status="PASS" signature="checkMenu()[pri:0, instance:com.bahar.automation.test.HomeTest@457e2f02]" name="checkMenu" duration-ms="396" started-at="2017-01-26T16:47:21Z" finished-at="2017-01-26T16:47:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenu -->
-        <test-method status="PASS" signature="checkLogin(java.util.List)[pri:0, instance:com.bahar.automation.test.HomeTest@732c2a62]" name="checkLogin" duration-ms="21856" started-at="2017-01-25T17:32:30Z" data-provider="loginData" finished-at="2017-01-25T17:32:52Z">
+        <test-method status="PASS" signature="checkLogin(java.util.List)[pri:0, instance:com.bahar.automation.test.HomeTest@457e2f02]" name="checkLogin" duration-ms="2938" started-at="2017-01-26T16:47:23Z" data-provider="loginData" finished-at="2017-01-26T16:47:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Login [userName=admin, password=admin], Login [userName=admin, password=admin], Login [userName=demo, password=demo], Login [userName=demo, password=demo], Login [userName=#12, password=#12], Login [userName=#12, password=#12]]]]>
+                <![CDATA[[Login [userName=demo, password=demo]]]]>
               </value>
             </param>
           </params>
@@ -31,6 +47,6 @@
           </reporter-output>
         </test-method> <!-- checkLogin -->
       </class> <!-- com.bahar.automation.test.HomeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- reservedFlight -->
+  </suite> <!-- Suite1 -->
 </testng-results>

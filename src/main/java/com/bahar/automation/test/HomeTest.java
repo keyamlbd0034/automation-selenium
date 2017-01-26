@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.bahar.automation.dataprovider.LoginDataProvider;
@@ -15,15 +16,12 @@ import com.bahar.automation.util.TextUtils;
 import com.bahar.automation.util.XpathUtils;
 
 public class HomeTest {
-	private WebDriver driver=DriverManager.getDriver();
-	
-	@BeforeClass
-	public void openPage(){
-		driver.get(TextUtils.BASE_URL);
-	}
+	private WebDriver driver= null;
 	
 	@Test(priority=1)
 	public void checkTitle(){
+		driver=DriverManager.driver;
+		driver.get(TextUtils.BASE_URL); 
 		Assert.assertEquals(driver.getTitle(), TextUtils.LOGIN_PAGE_TITLE);
 	}
 	

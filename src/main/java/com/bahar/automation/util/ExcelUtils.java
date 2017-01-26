@@ -1,6 +1,5 @@
 package com.bahar.automation.util;
 
-import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.bahar.automation.dto.Login;
 
-import net.sourceforge.htmlunit.corejs.javascript.GeneratedClassLoader;
+
 
 public class ExcelUtils {
 	
@@ -27,25 +26,34 @@ public class ExcelUtils {
 		List<Login> logins=new ArrayList<Login>();
 		
 		//login is the first sheet in excel so getSheet parameter set to 0
-		Iterator<Row> iterator = new ExcelUtils().getSheet(0).iterator();
+		Iterator<Row> iterator = ExcelUtils.getSheet(0).iterator();
         while (iterator.hasNext()) {
             Row nextRow = iterator.next();
             Iterator<Cell> cellIterator = nextRow.cellIterator();
-             
+            Login login=new Login();
+            byte cellCounter=0;
             while (cellIterator.hasNext()) {
                 Cell cell = cellIterator.next();
-                 Login login=new Login();
-                 login.setUserName(cell.getStringCellValue());
-                 login.setPassword(cell.getStringCellValue());
-                 System.out.println(login);
-               logins.add(login);
+                switch (cellCounter) {
+				case 0:
+					login.setUserName(cell.getStringCellValue());
+					cellCounter++;
+					break;
+				case 1:
+					login.setPassword(cell.getStringCellValue());
+					break;
+				default:
+					break;
+				}               
+                 
             }
-            close();
+            logins.add(login);
         }
+        close();
 		return logins;
 	}
 	
-	private  Sheet getSheet(int sheetNo) throws IOException{
+	private  static Sheet getSheet(int sheetNo) throws IOException{
 		// change the file location as per your computer
 		inputStream = new FileInputStream(new File("D:\\data.xlsx"));
 		workbook = new XSSFWorkbook(inputStream);

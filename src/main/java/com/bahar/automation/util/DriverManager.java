@@ -5,16 +5,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class DriverManager {
-	private static WebDriver driver=null;
+	static{
+		System.setProperty("webdriver.gecko.driver", "D:\\geckodriver\\wires.exe");
+	}
+	public static WebDriver driver=new FirefoxDriver();
 	
 	private DriverManager(){
 		
-	}
-	public static synchronized WebDriver getDriver(){
-		System.setProperty("webdriver.gecko.driver", "D:\\geckodriver\\wires.exe");
-		 if(driver==null)
-			 return new FirefoxDriver();
-		 else
-			 return driver;
 	}
 }
