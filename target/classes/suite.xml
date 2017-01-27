@@ -8,6 +8,7 @@
        <class name="com.bahar.automation.test.HomeTest" />
        <class name="com.bahar.automation.test.FindFlightTest" />
        <class name="com.bahar.automation.test.SelectFlightTest" />
+       <class name="com.bahar.automation.test.BookFlightTest" />
     </classes>
   </test>
 </suite>

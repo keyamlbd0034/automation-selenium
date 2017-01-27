@@ -30,7 +30,7 @@ public class FindFlightTest {
 	public void checkFlightDetails(){
 		driver.findElement(By.xpath(XpathUtils.FindFlight.RADIO_ONE_WAY)).click();
 		Select passenger = new Select(driver.findElement(By.xpath(XpathUtils.FindFlight.DROPDOWN_PASSENGERS)));
-		passenger.selectByIndex(2);
+		passenger.selectByIndex(0);
 		Select departingFrom = new Select(driver.findElement(By.xpath(XpathUtils.FindFlight.DROPDOWN_DEPARTING_FROM)));
 		departingFrom.selectByIndex(2);
 		Select departingFromOn = new Select(driver.findElement(By.xpath(XpathUtils.FindFlight.DROPDOWN_DEPARTING_FROM_ON)));

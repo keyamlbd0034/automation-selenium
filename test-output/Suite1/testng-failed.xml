@@ -3,11 +3,11 @@
 <suite thread-count="1" name="Failed suite [Suite1]">
   <test name="reservedFlight(failed)">
     <classes>
-      <class name="com.bahar.automation.test.FindFlightTest">
+      <class name="com.bahar.automation.test.SelectFlightTest">
         <methods>
-          <include name="checkTitle"/>
+          <include name="selectFlightDetails"/>
         </methods>
-      </class> <!-- com.bahar.automation.test.FindFlightTest -->
+      </class> <!-- com.bahar.automation.test.SelectFlightTest -->
     </classes>
   </test> <!-- reservedFlight(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

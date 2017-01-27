@@ -13,7 +13,7 @@ public class App
 {
     public static void main( String[] args ) throws IOException 
     {
-    	ExcelUtils.getLoginData();
+    	System.out.println("Hello world");
     	
     }
 }
